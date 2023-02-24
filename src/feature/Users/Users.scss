@@ -1,0 +1,16 @@
+.users {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+      padding-block: 10px;
+      margin-bottom: 8px;
+      border: 1px solid #333;
+      cursor: pointer;
+    }
+  }
+}

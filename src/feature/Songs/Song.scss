@@ -1,0 +1,38 @@
+.song-app {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  &__edit {
+    padding: 5px 10px;
+    margin: 0 20px;
+    border: none;
+    outline: none;
+    background-color: yellow;
+  }
+  &__add {
+    margin-bottom: 8px;
+    input {
+      width: 70%;
+    }
+  }
+  &__btn {
+    border: 3px solid transparent;
+    outline: none;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+      padding-block: 10px;
+      margin-bottom: 8px;
+      border: 1px solid magenta;
+    }
+  }
+  &__delete {
+    font-size: 20px;
+    font-weight: 700;
+    color: #999;
+    cursor: pointer;
+  }
+}

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import PropTypes from "prop-types";
+import "./App.css";
+import Home from "./feature/Home";
+import Contact from "./feature/Contact";
+import Users from "./feature/Users";
+import Songs from "./feature/Songs";
+import DetailUser from "./feature/DetailUser/DetailUser";
+import NavCustom from "./feature/Nav";
+import PageError from "./feature/PageError/PageError";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <NavCustom />
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/contact" component={Contact} />
+          <Route path="/users" component={Users} exact />
+          <Route path="/users/:id" component={DetailUser} />
+          <Route path="/songs" component={Songs} />
+          <Route component={PageError}></Route>
+        </Switch>
+      </div>
+    );
+  }
 }
+
+App.propTypes = {};
 
 export default App;
